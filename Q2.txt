@@ -1,0 +1,82 @@
+#include<iostream>
+#include<stdio.h>
+using namespace std;
+
+class account {
+private:
+	int accountBalance;
+public:
+	account(int balance) {
+		if (balance > 0)
+		{
+			accountBalance = balance;
+		} else {
+			cout << "Balace can't be negative.. setting it to zero \n";
+			balance = 0;
+			accountBalance = balance;
+
+		}
+	}
+	void Credit(int amount)
+	{
+		accountBalance += amount;
+
+	}
+	void Debit (int amount)
+	{
+		int temp = accountBalance - amount;
+		if (temp > 0)
+		{
+			accountBalance -= amount;
+
+		} else {
+			cout << "Debit amount exceeded account balance. \n";
+		}
+	}
+	int getBalance ()
+	{
+		return accountBalance;
+	}
+
+};
+int main()
+{
+/*
+#ifndef ONLINE_JUDGE
+	freopen("input.txt" , "r" , stdin);
+	freopen("output.txt", "w" , stdout);
+#endif
+*/
+	int openBalance;
+	cout << "enter the amount you want to start employee account with? \n";
+	cin >> openBalance;
+	account (openBalance);
+	int paisa;
+	cout << "enter the amount you want to add in employee's account? \n";
+	cin >> paisa;
+	employee.Credit(paisa);
+	cout << employee.getBalance() << "\n";
+	double paisa1 ;
+	cout << "enter the amount you want to remove in employees account? \n";
+	cin >> paisa1;
+	employee.Debit(paisa1);
+	cout << employee.getBalance() << "\n";
+	cout << "enter the amount you want to start aarohi account with? \n";
+	cin >> openBalance;
+	account aarohi(openBalance);
+	cout << "enter the amount you want to add in aarohi's account? \n";
+	cin >> paisa;
+	aarohi.Debit(paisa);
+	cout << aarohi.getBalance() << "\n";
+	cout << "enter the amount you want to remove in aarohi's account? \n";
+	cin >> paisa1;
+	aarohi.Debit(paisa1);
+	cout << aarohi.getBalance() << "\n";
+
+
+
+
+
+
+	return 0;
+}
