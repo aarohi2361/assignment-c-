@@ -6,7 +6,6 @@ class Complex{
    Complex(int r=0 ,int i =0){
        real = r;
        img = i;
-       
    }
    void print(){
        cout<<real<<" +i"<<img<<"\n";
