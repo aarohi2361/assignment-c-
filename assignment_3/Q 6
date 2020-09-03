@@ -28,7 +28,6 @@ for(int i=0;i<n;i++)
 {
     cin>>arr[i];
 }
- 
 cout<<"Car  Hours   Charge\n";
 for(int i=0;i<n;i++){
     cout<<i+1<<"    "<<arr[i]<<"      "<<charges(arr[i])<<"\n";
